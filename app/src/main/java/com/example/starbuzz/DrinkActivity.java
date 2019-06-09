@@ -1,5 +1,6 @@
 package com.example.starbuzz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -14,7 +15,13 @@ public class DrinkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink);
 
-        int drinkId = (Integer) getIntent().getExtras().get(EXTRA_DRINKID);
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if (extras == null) return;
+
+        Integer drinkId = (Integer) extras.get(EXTRA_DRINKID);
+        if (drinkId == null) return;
+
         Drink drink = Drink.drinks[drinkId];
 
         TextView name = findViewById(R.id.name);
