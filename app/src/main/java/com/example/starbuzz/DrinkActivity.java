@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class DrinkActivity extends AppCompatActivity {
 
-    public static final String EXTRA_DRINKID = "drinkId";
+    public static final String EXTRA_DRINK_ID = "drinkId";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class DrinkActivity extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         if (extras == null) return;
 
-        Integer drinkId = (Integer) extras.get(EXTRA_DRINKID);
+        Integer drinkId = (Integer) extras.get(EXTRA_DRINK_ID);
         if (drinkId == null) return;
 
         Drink drink = Drink.drinks[drinkId];
