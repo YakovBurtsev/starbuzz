@@ -32,7 +32,7 @@ public class DrinkActivity extends AppCompatActivity {
              Cursor cursor = db.query("DRINK",
                      new String[]{"NAME", "DESCRIPTION", "IMAGE_RESOURCE_ID"},
                      "_id = ?",
-                     new String[]{Integer.toString(drinkId + 1)},
+                     new String[]{Integer.toString(drinkId)},
                      null, null, null)) {
 
             if (cursor.moveToFirst()) {
