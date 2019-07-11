@@ -8,4 +8,5 @@
         <item>Stores</item>
     </string-array>
     <string name="favorite">Favorite</string>
+    <string name="favorites">Your favorite drinks:</string>
 </resources>
