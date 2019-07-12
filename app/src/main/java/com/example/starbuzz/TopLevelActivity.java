@@ -86,6 +86,7 @@ public class TopLevelActivity extends AppCompatActivity {
         ListView listFavorites = findViewById(R.id.list_favorites);
         CursorAdapter adapter = (CursorAdapter) listFavorites.getAdapter();
         adapter.changeCursor(newCursor);
+        favoritesCursor = newCursor;
     }
 
     @Override
